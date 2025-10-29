@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>GEN Z AI 😎🔥</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: Poppins; background: #111; color: #eee; margin: 0; }
-    #chat { max-width: 500px; margin: auto; padding: 20px; }
-    .msg { margin: 8px 0; padding: 10px 14px; border-radius: 15px; max-width: 80%; }
-    .user { background: #00d5ff; align-self: flex-end; color: #000; }
-    .bot { background: #262626; }
-    #inputBox { display: flex; gap: 10px; margin-top: 12px; }
-    input { flex: 1; padding: 12px; border-radius: 10px; border: none; }
-    button { padding: 12px; border: none; border-radius: 10px; background:#ff0077; color:#fff; cursor:pointer; }
-    #imgInput { margin-top: 10px; color:#fff; }
-  </style>
+<meta charset="UTF-8">
+<title>GEN Z AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  body {background:#0e0e0e;color:#eee;font-family:Poppins;margin:0;display:flex;justify-content:center;}
+  #app {width:380px;height:100vh;display:flex;flex-direction:column;padding:15px;}
+  #chat {flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;}
+  .msg {padding:10px 14px;border-radius:16px;max-width:80%;font-size:14px;line-height:1.4;}
+  .user {background:#4AA8FF;color:#000;margin-left:auto;border-bottom-right-radius:4px;}
+  .bot {background:#222;border-bottom-left-radius:4px;}
+  #inputBox {display:flex;gap:8px;margin-top:10px;}
+  input {flex:1;background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:10px;color:#fff;}
+  button {background:#4AA8FF;border:none;border-radius:14px;padding:10px 18px;color:#000;cursor:pointer;font-weight:600;}
+  #imgInput {display:none;}
+  #imgLabel {background:#222;padding:8px 12px;border-radius:12px;cursor:pointer;font-size:12px;margin-top:8px;text-align:center;}
+  .typing {animation: blink 1s infinite;opacity:0.5;}
+  @keyframes blink {50%{opacity:1}}
+</style>
 </head>
 <body>
+<div id="app">
   <div id="chat"></div>
-  <div id="inputBox">
-    <input id="text" placeholder="ketik disini bestie..." />
-    <button onclick="send()">Kirim</button>
-  </div>
+
+  <label id="imgLabel" for="imgInput">📷 Kirim gambar</label>
   <input type="file" id="imgInput" accept="image/*" onchange="sendImage()">
-  <script src="script.js"></script>
+  
+  <div id="inputBox">
+    <input id="text" placeholder="ketik disini bestie..." autocomplete="off">
+    <button onclick="send()">▶</button>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
