@@ -1,0 +1,25 @@
+# Core ML / Deep Learning
+torch
+transformers
+accelerate
+sentencepiece
+bitsandbytes
+
+# Data utils
+numpy
+pandas
+
+# Web API (buat FastAPI server & chat API)
+fastapi
+uvicorn
+
+# Vision (auto peka gambar)
+Pillow
+# CLIP model (vision encoder)
+git+https://github.com/openai/CLIP.git
+
+# Evaluasi & logging opsional
+tqdm
+
+# Safety
+protobuf
